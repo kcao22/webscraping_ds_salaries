@@ -87,3 +87,6 @@ My best performing Random Forest model produced a MAE score of 14.58.
 ## Interactive Terminal
 
 As a final step, an interactive terminal was produced using Python that prompts a user for input when running the interactive_terminal.py file. A user can then copy paste job post data into the terminal as prompted and receive a predicted salary for the job posting.
+
+![alt text](https://github.com/kcao22/webscraping_ds_salaries/blob/main/images/sample_working_terminal.JPG "Interactive Terminal")
+
