@@ -52,9 +52,19 @@ Using Selenium, I build a web scraping tool for Glassdoor, a job searching servi
  
  Below are a few interesting visuals.
 
+![alt text](https://github.com/kcao22/webscraping_ds_salaries/blob/main/images/heatmap_corr_num_vals.png "Correlation Heatmap")
+![alt text](https://github.com/kcao22/webscraping_ds_salaries/blob/main/images/grouped_company_industry_salaries.png "Salaries by Industry")
+![alt text](https://github.com/kcao22/webscraping_ds_salaries/blob/main/images/job_titles.png "Salaries by Job Label")
+![alt text](https://github.com/kcao22/webscraping_ds_salaries/blob/main/images/label_level_sals.png "Job Label and Level Salaries")
+
+
+
 ## Machine Learning Modeling
 
-As the data contains many rows of data that were filled with suitable values, the data is quite sparse. I chose to run with a Random Forest Regressor model because of this. Train test splits were performed to split the data into 75% training data and 25% test data. Model performance is evaluated based on Mean Absolute Error for easier interpretation when evaluating salary estimates. Outliers from the data are removed using the Interquartile Range Method (IQR) to ensure MAE will not be heavily skewed by outlier data.
+As the data contains many rows of data that were filled with suitable values, the data is quite sparse. I chose to run with a Random Forest Regressor model because of this. Train test splits were performed to split the data into 75% training data and 25% test data. Model performance is evaluated based on Mean Absolute Error for easier interpretation when evaluating salary estimates. Outliers from the data are removed using the Interquartile Range Method (IQR) to ensure MAE will not be heavily skewed by outlier data. See the below image for initial outliers from all scraped data.
+
+![alt text](https://github.com/kcao22/webscraping_ds_salaries/blob/main/images/average_salary_outliers.png "Outliers")
+
 
 The training data is then used to fit a OneHotEncoder before the encoder transforms the test set data. OneHotEncoder is employed here to ensure that dummy variable columns match between train and test datasets.
 
@@ -67,6 +77,8 @@ Validation curves are plotted a range of values for the following Random Forest 
   - max_features
 
 This provides insight on ballpark ranges for optimizing each parameter and ensuring no overfitting occurs. Below is an example of overfitting for a parameter.
+
+![alt text](https://github.com/kcao22/webscraping_ds_salaries/blob/main/images/max_depth%20overfitting.png "Outliers")
 
 Recursive feature elimination for random forest is then used to reduce the number of features resulting from OneHotEncoding.
 
