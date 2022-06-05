@@ -11,7 +11,7 @@ from sklearn.ensemble import RandomForestRegressor
 warnings.filterwarnings('ignore')
 
 # Loading Training Data
-df = pd.read_csv('cleaned_no_outliers.csv')
+df = pd.read_csv('data/cleaned_no_outliers.csv')
 columns = ['Rating', 'Company Size', 'Company Type', 'Company Revenue', 'Hourly', 'Employer Provided', 'Glassdoor Estimated', 'Job State', 'Company Age', 'Education Demanded', 'Python', 'SQL',
 'Excel', 'AWS', 'Spark', 'Tableau', 'Scala', 'Big Data',
 'Data Visualization', 'Description Length', 'Job Level', 'Job Label', 'Grouped Company Industry']

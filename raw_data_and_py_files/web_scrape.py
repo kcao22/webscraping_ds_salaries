@@ -40,7 +40,8 @@ def get_data(rows, test=False):
         - Company information
     '''
     url = 'https://www.glassdoor.com/Job/data-scientist-jobs-SRCH_KO0,14.htm'
-    driver = webdriver.Edge()  # Using Edge browser
+    path = 'D:\Documents\SeleniumDrivers\msedgedriver.exe'
+    driver = webdriver.Edge(path)  # Using Edge browser
     driver.get(url)
     all_jobs = []
     # job_count = 1
@@ -172,3 +173,7 @@ def concat_all_csv():
     empty = empty.drop_duplicates()
     print('Unique Jobs: ', len(empty))
     return empty
+
+data_to_df_csv('jun_4_2022')
+overall = concat_all_csv()
+overall.to_csv('data/temp_all.csv', index=False)
