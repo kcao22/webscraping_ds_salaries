@@ -1,4 +1,4 @@
-# Project Overview: Predicting Data Scienctist Salaries
+# Project Overview: Predicting Data Scientist Salaries
 
  - Built Python regression tool that predicts data scientist salaries with Mean Absolute Error (MAE) of ~ $14k. This tool was built to help prospective data scientists to get estimates of data science salaries for job postings where salaries are not listed.
  - Used Selenium to build web scraping tool to scrape ~ 5,000 jobs from Glassdoor.com and transformed data into a useable dataset using Python.
