@@ -4,9 +4,9 @@
  - Used Selenium to build web scraping tool to scrape ~ 5,000 jobs from Glassdoor.com and transformed data into a dataset using Python.
  - Transformed dataset and engineered different features including using spaCy to process job titles and Python to collect popular Data Science skillsets from job descriptions.
  - Optimized Random Forest Regression model using validation curves, GridSearchCV, and recursive feature elimination to acheive lowest possible MAE.
- - Built interactive Python terminal that prompts user for data science job post information and returns a predicted salary for the job position.
+ - Built interactive Gradio web page for user to input data science job post information that returns a predicted salary for the job position.
 
-![Alt Text](https://github.com/kcao22/webscraping_ds_salaries/blob/main/images/interactive_terminal.gif)
+![Alt Text](https://github.com/kcao22/webscraping_ds_salaries/blob/main/images/gradio_sample.gif)
 
 ## Libraries and Resources Used
 
@@ -88,9 +88,7 @@ Recursive feature elimination for random forest is then used to reduce the numbe
 
 My best performing Random Forest model produced a MAE score of 14.58.
 
-## Interactive Terminal
+## Interactive Web Page Estimation Tool
 
-As a final step, an interactive terminal was produced using Python that prompts a user for input when running the interactive_terminal.py file. A user can then copy paste job post data into the terminal as prompted and receive a predicted salary for the job posting.
-
-![alt text](https://github.com/kcao22/webscraping_ds_salaries/blob/main/images/sample_working_terminal.JPG "Interactive Terminal")
+As a final step, an interactive web page was produced using Gradio where a user can input job posting information. The web page then returns a predicted salary for the job posting. To see this in action, view the .gif at the top of README, or run gradio_gui.py in Python terminal to host the page locally.
 
