@@ -5,7 +5,7 @@
  - Transformed dataset and engineered different features including using spaCy to process job titles and Python to collect popular Data Science skillsets from job descriptions.
  - Optimized Random Forest Regression model using validation curves, GridSearchCV, and recursive feature elimination to acheive lowest possible MAE.
  - Built interactive Python terminal that prompts user for data science job post information and returns a predicted salary for the job position.
- - 
+
 ![Alt Text](https://github.com/kcao22/webscraping_ds_salaries/blob/main/images/interactive_terminal.gif)
 
 ## Libraries and Resources Used
@@ -32,7 +32,7 @@ Using Selenium, I build a web scraping tool for Glassdoor, a job searching servi
  - Company Industry
  - Company Revenue
 
- Glassdoor job postings are often redundant after a few pages, with the same job postings appearing again and again. After scraping, rows of data that are identical are removed from the overall dataset.
+ Glassdoor job postings are often redundant after a few pages, with the same job postings appearing again and again. After scraping, rows of data that are identical are removed from the overall dataset. Below is an example of the webscraping tool at work.
 
 ![Alt Text](https://github.com/kcao22/webscraping_ds_salaries/blob/main/images/web_scraper.gif)
 
