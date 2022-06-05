@@ -250,7 +250,7 @@ def group_company_attributes(df):
 
             'Government': ['Aerospace & Defense','Government & Public Administration', 'National Agencies', 'Government', 'Federal Agencies'],
 
-            'Retail': ['Consumer Electronics & Appliances Stores',  'Department, Clothing & Shoe Stores', 'Department, Clothing, & Shoe Stores', 'General Merchandise & Superstores', 'Grocery Stores', 'Home Furniture & Housewares Stores', 'Other Retail Stores', 'Restaurants & Cafes', 'Consumer Product Rental', 'Retail & Wholesale', 'Sporting Goods Stores', 'Wholesale',],
+            'Retail': ['Consumer Electronics & Appliances Stores',  'Department, Clothing & Shoe Stores', 'Department, Clothing, & Shoe Stores', 'General Merchandise & Superstores', 'Grocery Stores', 'Home Furniture & Housewares Stores', 'Other Retail Stores', 'Restaurants & Cafes', 'Consumer Product Rental', 'Retail & Wholesale', 'Sporting Goods Stores', 'Wholesale', 'Retail'],
 
             'Service': ['Advertising & Public Relations',  'Advertising & Marketing', 'Business Consulting', 'Financial Services', 'Grantmaking & Charitable Foundations', 'HR Consulting', 'Hotels & Resorts', 'Human Resources & Staffing', 'Management & Consulting', 'Membership Organizations', 'Nonprofit & NGO', 'Security & Protective', 'Staffing & Outsourcing', 'Staffing & Subcontracting', 'Service', 'Consulting',  'Education Training Services', 'Farm Support Services', 'IT Services','Metals Brokers', 'Religious Organizations', 'Security Services', 'Social Assistance', 'Taxi & Car Services', 'Transportation Management',],
 

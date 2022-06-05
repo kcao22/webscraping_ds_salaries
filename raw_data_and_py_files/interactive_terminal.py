@@ -32,12 +32,11 @@ while True:
         break
     contents.append(line)
 job_description = ''.join([line for line in contents])
-company_size = int(input('Please select the corresponding number to the company size: \n1. 1 to 50 Employees \n2. 51 to 200 Employees \n3. 201 to 500 Employees \n4. 501 to 1000 Employees \n5. 1001 to 5000 Employees \n5. 5001 to 10000 Employees \n6. 10000+ Employees \n7. Unknown  \n: ' ))
+company_size = int(input('Please select the corresponding number to the company size: \n1. 1 to 50 Employees \n2. 51 to 200 Employees \n3. 201 to 500 Employees \n4. 501 to 1000 Employees \n5. 1001 to 5000 Employees \n6. 5001 to 10000 Employees \n7. 10000+ Employees \n8. Unknown  \n: ' ))
 year_founded = input('Please input the year the company was founded. If unknown, enter -1: ')
 company_type = int(input('Please select the corresponding number to the company size: \n1. Company - Private \n2. Company - Public \n3. Other  \n: '))
 company_revenue = int(input('Please select the corresponding number to the company size: \n1. Less than $1 million (USD) \n2. $1 to $5 million (USD) \n3. $5 to $10 million (USD) \n4. $10 to $25 million (USD) \n5. $25 to $50 million (USD) \n5. $50 to $100 million (USD) \n6. $100 to $500 million (USD) \n7. $500 million to $1 billion (USD) \n8. $1 to $2 billion (USD) \n9. $2 to $5 billion (USD) \n10. $5 to $10 billion (USD) \n11. $10+ billion (USD) \n12. Unknown / Non-Applicable \n: ' ))
 grouped_sector = int(input('Please select the corresponding number to the company sector of best fit: \n1. Education \n2. Retail Service \n3. Health \n4. Manufacturing \n5. Finance \n6. Communications \n7. Entertainment \n8. Technology \n9. Construction / Real Estate \n10. Energy & Transportation \n11. Unknown / Non-Applicable \n: ' ))
-company_industry = '-1'
 company_sector = '-1'
 
 # Converting input integer to string choice
@@ -89,7 +88,7 @@ grouped_sector = grouped_sector_dict[grouped_sector]
 
 # Loading user test dataset
 cols_pd = ['Job Name', 'Job Description', 'Rating', 'Company Name', 'Job Location', 'Company Size', 'Year Founded', 'Company Type', 'Company Industry', 'Company Sector', 'Company Revenue']
-values = [[job_name, job_description, rating, company_name, job_location, company_size, year_founded, company_type, company_industry, company_sector, company_revenue]]
+values = [[job_name, job_description, rating, company_name, job_location, company_size, year_founded, company_type, grouped_sector, company_sector, company_revenue]]
 df_test = pd.DataFrame(values, columns=cols_pd)
 
 # Transforming user test data
