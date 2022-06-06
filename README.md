@@ -11,7 +11,7 @@
 ## Libraries and Resources Used
 
  - **Python Version**: 3.9
- - **Main Packages**: Matplotlib, Pandas, scikit-learn, seaborn, Selenium, spaCy
+ - **Main Packages**: Gradio, Matplotlib, Pandas, scikit-learn, seaborn, Selenium, spaCy
  - **Environment Requirements**: conda env create -f environment.yml
  - **Data Cleaning Ideas**: https://github.com/PlayingNumbers/ds_salary_proj
 
