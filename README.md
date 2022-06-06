@@ -91,4 +91,4 @@ My best performing Random Forest model produced a MAE score of 14.58.
 ## Interactive Web Page Estimation Tool
 
 As a final step, an interactive web page was produced using Gradio where a user can input job posting information. The web page then returns a predicted salary for the job posting. To see this in action, view the .gif at the top of README. If you would like to use the web interface yourself, please run gradio_gui.py in Python terminal to host the page locally.
-
+![Alt Text](https://github.com/kcao22/webscraping_ds_salaries/blob/main/images/terminal_gradio.gif)
