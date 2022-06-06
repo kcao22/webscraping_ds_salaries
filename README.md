@@ -17,7 +17,7 @@
 
  ## Web Scraping
 
-Using Selenium, I build a web scraping tool for Glassdoor, a job searching service. Each job posting scraped from Glassdoor was found with a "data scientist" keyword search and was done irrespective of location and minimum or maximum salaries. 5,000 jobs were scraped from the following link: https://www.glassdoor.com/Job/data-scientist-jobs-SRCH_KO0,14.htm. From each job post, the following data points were immediately available upon clicking the "Show More" drop down and thus were collected:
+Using Selenium, I built a web scraping tool for Glassdoor, a job searching service. Each job posting scraped from Glassdoor was found with a "data scientist" keyword search and was done irrespective of location and minimum or maximum salaries. 5,000 jobs were scraped from the following link: https://www.glassdoor.com/Job/data-scientist-jobs-SRCH_KO0,14.htm. From each job post, the following data points were immediately available upon clicking the "Show More" drop down and thus were collected:
 
  - Company Name
  - Job Name
@@ -32,19 +32,19 @@ Using Selenium, I build a web scraping tool for Glassdoor, a job searching servi
  - Company Industry
  - Company Revenue
 
- Glassdoor job postings are often redundant after a few pages, with the same job postings appearing again and again. After scraping, rows of data that are identical are removed from the overall dataset. Below is an example of the webscraping tool at work.
+ Glassdoor job postings are often redundant after a few pages, with the same job postings appearing again and again. After scraping, rows of data that are identical are removed from the overall dataset. Below is an example of the webscraping tool progressing through different job posts that appear on Glassdoor. 
 
 ![Alt Text](https://github.com/kcao22/webscraping_ds_salaries/blob/main/images/web_scraper.gif)
 
  ## Data Cleaning and Feature Engineering
 
- Once the dataset is compiled from web scraping, the data needed to be cleaned. The following list describes the data cleaning and feature engineering that was done during this project:
+ Once the dataset was compiled from web scraping, the data needed to be cleaned. The following list describes the data cleaning and feature engineering that was done during this project:
 
   - Data cleaning including moving incorrect data points to correct data columns, filling null values, remapping categorical values that differed because of capitalization, and dropping null salary data
-  - Sliced numerical salary data from salary text
-  - Parsed job location state from location data and mapped locations to USA major regions
-  - Converted company year founded to age of company
-  - Extracted higher education requirements and job skill requirement counts from job description text
+  - Parsed numerical salary data from salary text
+  - Parsed job location state from location data and mapped locations to USA major regions to reduce number of features for encoding later
+  - Converted company founding year to age of company
+  - Extracted higher education requirements and job skill requirements from job description text
     - The engineered boolean skill columns such as "Python" and "SQL" were added based on rate of appearance in job description data. In this case, the top skills appearing in at least 1000 job descriptions (20% of all data) were included as boolean columns
   - Created description length column
   - Processed job titles using spaCy natural language processing for token matching with different labels and levels to create job level and explicit job label columns
@@ -90,5 +90,5 @@ My best performing Random Forest model produced a MAE score of 14.58.
 
 ## Interactive Web Page Estimation Tool
 
-As a final step, an interactive web page was produced using Gradio where a user can input job posting information. The web page then returns a predicted salary for the job posting. To see this in action, view the .gif at the top of README, or run gradio_gui.py in Python terminal to host the page locally.
+As a final step, an interactive web page was produced using Gradio where a user can input job posting information. The web page then returns a predicted salary for the job posting. To see this in action, view the .gif at the top of README. If you would like to use the web interface yourself, please run gradio_gui.py in Python terminal to host the page locally.
 
