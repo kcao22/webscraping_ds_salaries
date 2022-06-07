@@ -72,7 +72,7 @@ As the data contains many rows of data that were filled with suitable values, th
 
 The training data is then used to fit a OneHotEncoder before the encoder transforms the test set data. OneHotEncoder is employed here to ensure that dummy variable columns match between train and test datasets.
 
-Validation curves are plotted a range of values for the following Random Forest Regressor parameters:
+Validation curves are plotted for a range of values for the following Random Forest Regressor parameters:
 
   - n_estimators
   - max_depth
